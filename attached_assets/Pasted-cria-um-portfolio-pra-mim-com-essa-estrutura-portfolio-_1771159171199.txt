@@ -1,0 +1,183 @@
+cria um portfolio pra mim com essa estrutura:
+
+
+
+/portfolio
+ ├ index.html        ← página principal
+ ├ style.css         ← estilos
+ ├ script.js         ← interações (opcional)
+ ├ /assets
+ │   ├ /img          ← imagens
+ │   └ /icons        ← ícones
+
+
+
+não quero que usa banco de dados porque sera site estático e dispensa banco de dados
+🧱 Estrutura do site (conteúdo)
+1️⃣ Header (Topo)
+
+Seu nome
+
+Cargo
+
+Menu com âncoras
+
+Exemplo:
+
+João | Desenvolvedor Web
+[Sobre] [Projetos] [Skills] [Contato]
+
+2️⃣ Hero (Primeira dobra)
+
+É o que a pessoa vê ao abrir o site.
+
+Contém:
+
+Frase curta
+
+Tecnologias
+
+Botão para projetos
+
+Exemplo:
+
+Desenvolvedor Web focado em sistemas e soluções práticas
+HTML • CSS • JavaScript • PHP • MySQL
+[Ver projetos]
+
+3️⃣ Sobre mim
+
+Aqui você se vende tecnicamente.
+
+Inclua:
+
+O que você faz
+
+Em que é bom
+
+Experiência prática
+
+Exemplo:
+
+Sou desenvolvedor com experiência em sistemas web, suporte técnico, redes e infraestrutura, atuando em projetos próprios e corporativos.
+
+4️⃣ Skills (Habilidades)
+
+Organizado por categoria.
+
+Exemplo:
+
+Front-end
+
+HTML
+
+CSS
+
+JavaScript
+
+Back-end
+
+PHP
+
+MySQL
+
+Outros
+
+Git
+
+Linux
+
+Redes
+
+Infraestrutura
+
+5️⃣ Projetos (parte MAIS importante)
+
+Cada projeto deve ter:
+
+Nome
+
+Descrição curta
+
+Tecnologias
+
+Link da demo
+
+Link do código
+
+Exemplo de card:
+
+Sistema de Clínica
+Sistema para cadastro e agendamento de pacientes
+Tecnologias: PHP, MySQL, Bootstrap
+[Ver demo] [Código]
+
+
+👉 Melhor ter 3 bons projetos do que 10 fracos.
+
+6️⃣ Experiência (opcional, mas forte)
+
+Pode ser:
+
+Experiência profissional
+
+Freelance
+
+Projetos reais
+
+Exemplo:
+
+Auxiliar de TI – Hospital X
+Suporte, sistemas, redes e infraestrutura
+
+7️⃣ Contato
+
+Bem simples:
+
+Email
+
+WhatsApp
+
+LinkedIn
+
+GitHub
+
+Botão:
+
+“Vamos conversar?”
+
+8️⃣ Footer (Rodapé)
+
+Seu nome
+
+Ano
+
+Links sociais
+
+🧩 Estrutura do HTML (base mental)
+<header></header>
+<section id="hero"></section>
+<section id="sobre"></section>
+<section id="skills"></section>
+<section id="projetos"></section>
+<section id="experiencia"></section>
+<section id="contato"></section>
+<footer></footer>
+
+🎯 O que NÃO pode faltar
+
+✔️ Site responsivo (celular)
+✔️ Links funcionando
+✔️ Texto direto (sem enrolação)
+✔️ Código limpo
+✔️ Design simples
+
+✅ Resumo rápido
+
+Portfólio de dev = SITE
+
+Estrutura clara
+
+Projetos no centro
+
+GitHub linkado
