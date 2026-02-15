@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 
-import { useProfile, useProjects, useSkills, useExperience, useContactForm } from "@/hooks/use-portfolio";
 import { Navbar } from "@/components/Navbar";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -26,6 +25,8 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PROFILE, PROJECTS, SKILLS, EXPERIENCE } from "@/lib/constants";
+import { useToast } from "@/hooks/use-toast";
 
 // --- Form Schema ---
 const contactSchema = z.object({
@@ -35,13 +36,8 @@ const contactSchema = z.object({
 });
 
 export default function Portfolio() {
-  const { data: profile, isLoading: profileLoading } = useProfile();
-  const { data: projects, isLoading: projectsLoading } = useProjects();
-  const { data: skills, isLoading: skillsLoading } = useSkills();
-  const { data: experience, isLoading: experienceLoading } = useExperience();
+  const { toast } = useToast();
   
-  const contactMutation = useContactForm();
-
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -51,10 +47,20 @@ export default function Portfolio() {
     },
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   function onSubmit(values: z.infer<typeof contactSchema>) {
-    contactMutation.mutate(values, {
-      onSuccess: () => form.reset(),
-    });
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      console.log("Formulário enviado:", values);
+      toast({
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato. Retornarei em breve.",
+      });
+      form.reset();
+      setIsSubmitting(false);
+    }, 1000);
   }
 
   // --- Icon Helper ---
@@ -67,27 +73,10 @@ export default function Portfolio() {
     }
   };
 
-  // --- Loading State ---
-  if (profileLoading || projectsLoading || skillsLoading || experienceLoading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="space-y-4 text-center">
-          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="text-muted-foreground animate-pulse">Carregando coisas incríveis...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Fallback data if API returns empty
-  const displayProfile = profile || {
-    name: "João",
-    role: "Desenvolvedor Full Stack",
-    bio: "Eu construo experiências web acessíveis, pixel-perfect, performáticas e premium.",
-    email: "joao@example.com",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-  };
+  const displayProfile = PROFILE;
+  const skills = SKILLS;
+  const experience = EXPERIENCE;
+  const projects = PROJECTS;
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
