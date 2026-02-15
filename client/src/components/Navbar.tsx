@@ -17,11 +17,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", to: "about" },
-    { name: "Skills", to: "skills" },
-    { name: "Projects", to: "projects" },
-    { name: "Experience", to: "experience" },
-    { name: "Contact", to: "contact" },
+    { name: "Sobre", to: "about" },
+    { name: "Habilidades", to: "skills" },
+    { name: "Projetos", to: "projects" },
+    { name: "Experiência", to: "experience" },
+    { name: "Contato", to: "contact" },
   ];
 
   return (
@@ -63,7 +63,7 @@ export function Navbar() {
               contactSection?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Hire Me
+            Contrate-me
           </Button>
         </div>
 
@@ -107,7 +107,7 @@ export function Navbar() {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Hire Me
+                Contrate-me
               </Button>
             </div>
           </motion.div>

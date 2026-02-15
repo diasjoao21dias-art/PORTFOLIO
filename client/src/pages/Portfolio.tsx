@@ -29,9 +29,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 // --- Form Schema ---
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, "O nome deve ter pelo menos 2 caracteres"),
+  email: z.string().email("Por favor, insira um endereço de e-mail válido"),
+  message: z.string().min(10, "A mensagem deve ter pelo menos 10 caracteres"),
 });
 
 export default function Portfolio() {
@@ -73,7 +73,7 @@ export default function Portfolio() {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="space-y-4 text-center">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="text-muted-foreground animate-pulse">Loading amazing things...</p>
+          <p className="text-muted-foreground animate-pulse">Carregando coisas incríveis...</p>
         </div>
       </div>
     );
@@ -82,8 +82,8 @@ export default function Portfolio() {
   // Fallback data if API returns empty
   const displayProfile = profile || {
     name: "João",
-    role: "Full Stack Developer",
-    bio: "I build accessible, pixel-perfect, performant, and premium web experiences.",
+    role: "Desenvolvedor Full Stack",
+    bio: "Eu construo experiências web acessíveis, pixel-perfect, performáticas e premium.",
     email: "joao@example.com",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -141,13 +141,13 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h2 className="text-xl md:text-2xl font-medium text-primary mb-4 tracking-wider uppercase">
-                Hello, I'm
+                Olá, eu sou o
               </h2>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 tracking-tight">
                 {displayProfile.name}
               </h1>
               <p className="text-xl md:text-3xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
-                <span className="text-gradient font-semibold">{displayProfile.role}</span> based in Brazil.
+                <span className="text-gradient font-semibold">{displayProfile.role}</span> baseado no Brasil.
               </p>
             </motion.div>
 
@@ -159,11 +159,11 @@ export default function Portfolio() {
             >
               <ScrollLink to="projects" smooth={true} duration={500} offset={-100}>
                 <Button size="lg" className="rounded-full px-8 text-lg h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25">
-                  View Projects <ArrowRight className="ml-2 w-5 h-5" />
+                  Ver Projetos <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </ScrollLink>
               <Button size="lg" variant="outline" className="rounded-full px-8 text-lg h-14 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm">
-                Download CV <Download className="ml-2 w-5 h-5" />
+                Baixar CV <Download className="ml-2 w-5 h-5" />
               </Button>
             </motion.div>
           </div>
@@ -185,7 +185,7 @@ export default function Portfolio() {
       {/* ABOUT SECTION */}
       <section id="about" className="py-24 bg-secondary/30 relative">
         <div className="container mx-auto px-6">
-          <SectionHeading title="About Me" subtitle="Who I Am" />
+          <SectionHeading title="Sobre Mim" subtitle="Quem eu sou" />
           
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -200,10 +200,10 @@ export default function Portfolio() {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-white/5">
                 {[
-                  { label: "Experience", value: "3+ Years" },
-                  { label: "Projects", value: "20+" },
-                  { label: "Clients", value: "15+" },
-                  { label: "Coffee", value: "∞" }
+                  { label: "Experiência", value: "3+ Anos" },
+                  { label: "Projetos", value: "20+" },
+                  { label: "Clientes", value: "15+" },
+                  { label: "Café", value: "∞" }
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
                     <h4 className="text-3xl md:text-4xl font-bold font-heading text-white mb-2">{stat.value}</h4>
@@ -219,7 +219,7 @@ export default function Portfolio() {
       {/* SKILLS SECTION */}
       <section id="skills" className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <SectionHeading title="Technical Skills" subtitle="My Arsenal" />
+          <SectionHeading title="Habilidades Técnicas" subtitle="Meu Arsenal" />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills?.reduce((acc: any[], skill) => {
@@ -259,7 +259,7 @@ export default function Portfolio() {
             {/* Fallback if no skills */}
             {(!skills || skills.length === 0) && (
               <div className="col-span-3 text-center text-muted-foreground py-12 bg-card/20 rounded-2xl border border-dashed border-white/10">
-                No skills found. Add some in the database!
+                Nenhuma habilidade encontrada. Adicione algumas no banco de dados!
               </div>
             )}
           </div>
@@ -269,7 +269,7 @@ export default function Portfolio() {
       {/* EXPERIENCE SECTION */}
       <section id="experience" className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <SectionHeading title="Experience" subtitle="My Journey" />
+          <SectionHeading title="Experiência" subtitle="Minha Jornada" />
           
           <div className="max-w-4xl mx-auto relative">
             {/* Center Line */}
@@ -282,7 +282,7 @@ export default function Portfolio() {
               
               {(!experience || experience.length === 0) && (
                 <div className="text-center py-12">
-                  <p className="text-muted-foreground">Experience data coming soon.</p>
+                  <p className="text-muted-foreground">Dados de experiência em breve.</p>
                 </div>
               )}
             </div>
@@ -293,7 +293,7 @@ export default function Portfolio() {
       {/* PROJECTS SECTION */}
       <section id="projects" className="py-24">
         <div className="container mx-auto px-6">
-          <SectionHeading title="Featured Projects" subtitle="My Works" />
+          <SectionHeading title="Projetos em Destaque" subtitle="Meus Trabalhos" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects?.map((project, index) => (
@@ -318,7 +318,7 @@ export default function Portfolio() {
           
           <div className="mt-16 text-center">
             <Button variant="outline" size="lg" className="rounded-full px-8 border-white/10 hover:bg-white/5">
-              View All Projects <Github className="ml-2 w-4 h-4" />
+              Ver Todos os Projetos <Github className="ml-2 w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -327,7 +327,7 @@ export default function Portfolio() {
       {/* CONTACT SECTION */}
       <section id="contact" className="py-24 bg-gradient-to-b from-background to-secondary/40">
         <div className="container mx-auto px-6">
-          <SectionHeading title="Get In Touch" subtitle="Contact Me" />
+          <SectionHeading title="Entre em Contato" subtitle="Fale Comigo" />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 max-w-6xl mx-auto">
             {/* Contact Info */}
@@ -336,9 +336,9 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold font-heading mb-6">Let's talk about everything!</h3>
+              <h3 className="text-3xl font-bold font-heading mb-6">Vamos conversar sobre tudo!</h3>
               <p className="text-muted-foreground mb-12 text-lg">
-                Don't like forms? Send me an email. 👋
+                Não gosta de formulários? Me envie um e-mail. 👋
               </p>
               
               <div className="space-y-8">
@@ -347,7 +347,7 @@ export default function Portfolio() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">Mail Me</span>
+                    <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">E-mail</span>
                     <span className="text-xl font-medium">{displayProfile.email}</span>
                   </div>
                 </a>
@@ -359,7 +359,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">LinkedIn</span>
-                      <span className="text-xl font-medium">Connect with me</span>
+                      <span className="text-xl font-medium">Conecte-se comigo</span>
                     </div>
                   </a>
                 )}
@@ -371,7 +371,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">GitHub</span>
-                      <span className="text-xl font-medium">Follow my work</span>
+                      <span className="text-xl font-medium">Siga meu trabalho</span>
                     </div>
                   </a>
                 )}
@@ -395,7 +395,7 @@ export default function Portfolio() {
                         <FormItem>
                           <FormControl>
                             <Input 
-                              placeholder="Your Name" 
+                              placeholder="Seu Nome" 
                               className="h-14 px-6 bg-secondary/50 border-white/5 focus:border-primary/50 rounded-xl"
                               {...field} 
                             />
@@ -412,7 +412,7 @@ export default function Portfolio() {
                           <FormControl>
                             <Input 
                               type="email" 
-                              placeholder="Email Address" 
+                              placeholder="Endereço de E-mail" 
                               className="h-14 px-6 bg-secondary/50 border-white/5 focus:border-primary/50 rounded-xl"
                               {...field} 
                             />
@@ -428,7 +428,7 @@ export default function Portfolio() {
                         <FormItem>
                           <FormControl>
                             <Textarea 
-                              placeholder="Message" 
+                              placeholder="Mensagem" 
                               className="min-h-[160px] p-6 bg-secondary/50 border-white/5 focus:border-primary/50 rounded-xl resize-none"
                               {...field} 
                             />
@@ -444,7 +444,7 @@ export default function Portfolio() {
                     className="w-full h-14 text-lg rounded-xl font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-1"
                     disabled={contactMutation.isPending}
                   >
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {contactMutation.isPending ? "Enviando..." : "Enviar Mensagem"}
                   </Button>
                 </form>
               </Form>
@@ -457,10 +457,10 @@ export default function Portfolio() {
       <footer className="py-8 bg-background border-t border-white/5">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} {displayProfile.name}. All rights reserved.
+            © {new Date().getFullYear()} {displayProfile.name}. Todos os direitos reservados.
           </p>
           <p className="text-xs text-muted-foreground/50 mt-2">
-            Built with React, Tailwind & Love.
+            Feito com React, Tailwind & Amor.
           </p>
         </div>
       </footer>

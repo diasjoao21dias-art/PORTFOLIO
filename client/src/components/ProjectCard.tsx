@@ -38,7 +38,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               className="rounded-full"
               onClick={() => window.open(project.demoLink!, "_blank")}
             >
-              <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
+              <ExternalLink className="w-4 h-4 mr-2" /> Ver Demo
             </Button>
           )}
           {project.codeLink && (
@@ -48,7 +48,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               className="rounded-full bg-transparent border-white text-white hover:bg-white hover:text-black"
               onClick={() => window.open(project.codeLink!, "_blank")}
             >
-              <Github className="w-4 h-4 mr-2" /> Code
+              <Github className="w-4 h-4 mr-2" /> Código
             </Button>
           )}
         </div>
