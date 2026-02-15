@@ -1,12 +1,12 @@
 export const PROFILE = {
   id: 1,
-  name: "João",
-  role: "Desenvolvedor Web focado em sistemas, automação e soluções para empresas",
-  bio: "Sou desenvolvedor com experiência em sistemas web, suporte técnico, redes e infraestrutura, atuando em projetos próprios e corporativos.",
-  email: "contato@exemplo.com",
+  name: "João Dias",
+  role: "Desenvolvedor Full Stack",
+  bio: "Desenvolvedor apaixonado por criar soluções digitais inovadoras e experiências de usuário memoráveis. Com experiência em sistemas web, suporte técnico, redes e infraestrutura.",
+  email: "dom_dias21@hotmail.com",
   whatsapp: "11999999999",
-  linkedin: "linkedin.com/in/joao",
-  github: "github.com/joao"
+  linkedin: "https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/",
+  github: "https://github.com/diasjoao21dias-art"
 };
 
 export const SKILLS = [
