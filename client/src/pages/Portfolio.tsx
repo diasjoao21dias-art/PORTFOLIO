@@ -51,12 +51,17 @@ export default function Portfolio() {
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
     setIsSubmitting(true);
-    // Simulate API call
+    
+    const subject = encodeURIComponent(`Mensagem de ${values.name}`);
+    const body = encodeURIComponent(`Nome: ${values.name}\nEmail: ${values.email}\n\nMensagem:\n${values.message}`);
+    const mailtoUrl = `mailto:${displayProfile.email}?subject=${subject}&body=${body}`;
+    
+    window.location.href = mailtoUrl;
+    
     setTimeout(() => {
-      console.log("Formulário enviado:", values);
       toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Retornarei em breve.",
+        title: "E-mail preparado!",
+        description: "Seu cliente de e-mail foi aberto com os dados preenchidos.",
       });
       form.reset();
       setIsSubmitting(false);
