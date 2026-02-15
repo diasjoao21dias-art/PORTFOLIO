@@ -47,20 +47,15 @@ export default function Portfolio() {
     },
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const isSubmitting = false;
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
-    setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Formulário enviado:", values);
-      toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Retornarei em breve.",
-      });
-      form.reset();
-      setIsSubmitting(false);
-    }, 1000);
+    console.log("Formulário enviado:", values);
+    toast({
+      title: "Mensagem enviada!",
+      description: "Obrigado pelo contato. Retornarei em breve.",
+    });
+    form.reset();
   }
 
   // --- Icon Helper ---
