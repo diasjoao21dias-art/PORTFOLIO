@@ -47,15 +47,20 @@ export default function Portfolio() {
     },
   });
 
-  const isSubmitting = false;
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
-    console.log("Formulário enviado:", values);
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Retornarei em breve.",
-    });
-    form.reset();
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      console.log("Formulário enviado:", values);
+      toast({
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato. Retornarei em breve.",
+      });
+      form.reset();
+      setIsSubmitting(false);
+    }, 1000);
   }
 
   // --- Icon Helper ---
@@ -426,9 +431,9 @@ export default function Portfolio() {
                   <Button 
                     type="submit" 
                     className="w-full h-14 text-lg rounded-xl font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-1"
-                    disabled={contactMutation.isPending}
+                    disabled={isSubmitting}
                   >
-                    {contactMutation.isPending ? "Enviando..." : "Enviar Mensagem"}
+                    {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                   </Button>
                 </form>
               </Form>
