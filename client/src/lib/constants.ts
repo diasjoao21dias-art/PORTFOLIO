@@ -57,7 +57,7 @@ export const EXPERIENCE = [
     id: 1,
     role: "Auxiliar de TI",
     company: "Hospital X",
-    description: "Suporte, sistemas, redes e infraestrutura",
+    description: "Responsável por suporte a +100 usuários, manutenção de sistemas e redes internas",
     period: "2020 - 2022"
   },
   {
