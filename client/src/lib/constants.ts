@@ -1,7 +1,7 @@
 export const PROFILE = {
   id: 1,
   name: "João",
-  role: "Desenvolvedor Web",
+  role: "Desenvolvedor Web focado em sistemas, automação e soluções para empresas",
   bio: "Sou desenvolvedor com experiência em sistemas web, suporte técnico, redes e infraestrutura, atuando em projetos próprios e corporativos.",
   email: "contato@exemplo.com",
   whatsapp: "11999999999",
