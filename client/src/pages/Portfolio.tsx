@@ -52,12 +52,18 @@ export default function Portfolio() {
   function onSubmit(values: z.infer<typeof contactSchema>) {
     setIsSubmitting(true);
     
-    const subject = encodeURIComponent(`Mensagem de ${values.name}`);
-    const body = encodeURIComponent(`Nome: ${values.name}\nEmail: ${values.email}\n\nMensagem:\n${values.message}`);
-    const mailtoUrl = `mailto:${displayProfile.email}?subject=${subject}&body=${body}`;
+    // Preparar os dados para o link mailto
+    const subject = encodeURIComponent(`Nova mensagem de ${values.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${values.name}\n` +
+      `E-mail: ${values.email}\n\n` +
+      `Mensagem:\n${values.message}`
+    );
     
-    window.location.href = mailtoUrl;
+    // Abrir o cliente de e-mail com os dados preenchidos
+    window.location.href = `mailto:${PROFILE.email}?subject=${subject}&body=${body}`;
     
+    // Feedback visual e reset
     setTimeout(() => {
       toast({
         title: "E-mail preparado!",
