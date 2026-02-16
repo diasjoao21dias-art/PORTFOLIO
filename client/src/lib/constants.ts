@@ -14,7 +14,7 @@ export const SKILLS = [
   { id: 2, category: "Front-end", name: "CSS" },
   { id: 3, category: "Front-end", name: "JavaScript" },
   { id: 4, category: "Back-end", name: "PHP" },
-  { id: 5, category: "Back-end", name: "MySQL" },
+  { id: 5, category: "Back-end", name: "PostgreSQL" },
   { id: 6, category: "Back-end", name: "Node.js" },
   { id: 7, category: "Outros", name: "Git" },
   { id: 8, category: "Outros", name: "Linux" },
@@ -54,18 +54,18 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    id: 1,
-    role: "Gestão de TI",
-    company: "Hospital Med Center",
-    description: "Gestão estratégica de TI, infraestrutura e sistemas hospitalares",
-    period: "2022 - Atual"
-  },
-  {
     id: 2,
     role: "Analista de TI Sênior e Desenvolvedor",
     company: "Eletrosom SA",
     description: "Responsável por análise de sistemas, desenvolvimento e infraestrutura de TI",
     period: "2015 - 2022"
+  },
+  {
+    id: 1,
+    role: "Gestão de TI",
+    company: "Hospital Med Center",
+    description: "Gestão estratégica de TI, infraestrutura e sistemas hospitalares",
+    period: "2022 - Atual"
   },
   {
     id: 3,

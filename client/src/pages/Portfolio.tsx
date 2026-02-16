@@ -210,7 +210,7 @@ export default function Portfolio() {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-white/5">
                 {[
-                  { label: "Experiência", value: "10 Anos" },
+                  { label: "Experiência", value: "10+ Anos" },
                   { label: "Projetos", value: "20+" },
                   { label: "Clientes", value: "15+" },
                   { label: "Café", value: "∞" }
