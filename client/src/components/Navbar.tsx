@@ -109,46 +109,46 @@ export function Navbar() {
                 </button>
               </div>
 
-              <div className="flex flex-col space-y-2 overflow-y-auto pb-24">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.1 + i * 0.05 }}
-                  >
-                    <Link
-                      to={link.to}
-                      smooth={true}
-                      duration={500}
-                      offset={-80}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-xl font-semibold text-foreground/90 hover:text-primary py-4 px-6 rounded-2xl hover:bg-primary/5 transition-all flex items-center justify-between group cursor-pointer"
-                    >
-                      <span>{link.name}</span>
-                      <motion.div
-                        initial={{ opacity: 0, x: -10 }}
-                        whileHover={{ opacity: 1, x: 0 }}
-                      >
-                        <Menu size={18} className="text-primary" />
-                      </motion.div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="mt-auto pt-6 border-t border-white/5 bg-card absolute bottom-0 left-0 right-0 p-8 rounded-b-none">
-                <Button 
-                  className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl shadow-lg shadow-primary/20 text-lg"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    const contactSection = document.getElementById("contact");
-                    contactSection?.scrollIntoView({ behavior: "smooth" });
-                  }}
+          <div className="flex flex-col space-y-2 overflow-y-auto flex-1 min-h-0">
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={link.name}
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.1 + i * 0.05 }}
+              >
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-xl font-semibold text-foreground/90 hover:text-primary py-4 px-6 rounded-2xl hover:bg-primary/5 transition-all flex items-center justify-between group cursor-pointer"
                 >
-                  Vamos Conversar!
-                </Button>
-              </div>
+                  <span>{link.name}</span>
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileHover={{ opacity: 1, x: 0 }}
+                  >
+                    <Menu size={18} className="text-primary" />
+                  </motion.div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-auto pt-6 border-t border-white/5 shrink-0">
+            <Button 
+              className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl shadow-lg shadow-primary/20 text-lg"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                const contactSection = document.getElementById("contact");
+                contactSection?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Vamos Conversar!
+            </Button>
+          </div>
             </motion.div>
           </>
         )}
