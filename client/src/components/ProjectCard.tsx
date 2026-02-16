@@ -37,7 +37,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {project.demoLink && (
               <Button
                 size="default"
-                variant="primary"
+                variant="default"
                 className="rounded-full flex-1 md:flex-none shadow-lg shadow-primary/20"
                 onClick={() => window.open(project.demoLink!, "_blank")}
               >
@@ -79,7 +79,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </p>
 
         <div className="flex flex-wrap gap-2 mt-auto">
-          {project.technologies.map((tech, i) => (
+          {project.technologies.map((tech: string, i: number) => (
             <span
               key={i}
               className="px-4 py-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full bg-secondary text-secondary-foreground border border-white/5"
