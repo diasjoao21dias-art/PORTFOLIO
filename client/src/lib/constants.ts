@@ -55,13 +55,20 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     id: 1,
-    role: "Auxiliar de TI",
-    company: "Hospital X",
-    description: "Responsável por suporte a +100 usuários, manutenção de sistemas e redes internas",
-    period: "2020 - 2022"
+    role: "Gestão de TI",
+    company: "Hospital Med Center",
+    description: "Gestão estratégica de TI, infraestrutura e sistemas hospitalares",
+    period: "2022 - Atual"
   },
   {
     id: 2,
+    role: "Analista de TI Sênior e Desenvolvedor",
+    company: "Eletrosom SA",
+    description: "Responsável por análise de sistemas, desenvolvimento e infraestrutura de TI",
+    period: "2015 - 2022"
+  },
+  {
+    id: 3,
     role: "Desenvolvedor Freelancer",
     company: "Autônomo",
     description: "Desenvolvimento de sites institucionais e sistemas web",
