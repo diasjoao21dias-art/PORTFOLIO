@@ -28,7 +28,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
-          ? "bg-background/80 backdrop-blur-md border-b border-white/5 py-4"
+          ? "bg-background border-b border-white/5 py-4"
           : "bg-transparent py-6"
       }`}
     >
@@ -103,7 +103,7 @@ export function Navbar() {
                   <X size={20} />
                 </button>
               </div>
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-3">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.name}
@@ -117,7 +117,7 @@ export function Navbar() {
                       duration={500}
                       offset={-80}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-lg font-medium text-foreground/80 hover:text-primary py-3 px-4 rounded-xl hover:bg-primary/5 transition-all block cursor-pointer"
+                      className="text-lg font-medium text-foreground/80 hover:text-primary py-3 px-4 rounded-xl border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all block cursor-pointer"
                     >
                       {link.name}
                     </Link>
