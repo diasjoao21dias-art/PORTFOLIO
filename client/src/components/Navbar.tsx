@@ -79,38 +79,65 @@ export function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-white/5 overflow-hidden"
-          >
-            <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-background/60 backdrop-blur-sm z-40 md:hidden"
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 w-[280px] bg-card border-l border-white/5 z-50 md:hidden p-6 shadow-2xl"
+            >
+              <div className="flex justify-between items-center mb-10">
+                <span className="text-xl font-bold font-heading">Menu</span>
+                <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium text-foreground/80 hover:text-primary py-2 cursor-pointer"
+                  className="p-2 rounded-full bg-secondary/50"
                 >
-                  {link.name}
-                </Link>
-              ))}
-              <Button 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  const contactSection = document.getElementById("contact");
-                  contactSection?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Contrate-me
-              </Button>
-            </div>
-          </motion.div>
+                  <X size={20} />
+                </button>
+              </div>
+              <div className="flex flex-col space-y-2">
+                {navLinks.map((link, i) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ x: 20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.1 + i * 0.05 }}
+                  >
+                    <Link
+                      to={link.to}
+                      smooth={true}
+                      duration={500}
+                      offset={-80}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-lg font-medium text-foreground/80 hover:text-primary py-3 px-4 rounded-xl hover:bg-primary/5 transition-all block cursor-pointer"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="mt-auto absolute bottom-10 left-6 right-6">
+                <Button 
+                  className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl shadow-lg shadow-primary/20"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    const contactSection = document.getElementById("contact");
+                    contactSection?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Contrate-me
+                </Button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

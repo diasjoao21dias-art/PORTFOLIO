@@ -143,10 +143,10 @@ export default function Portfolio() {
               <h2 className="text-xl md:text-2xl font-medium text-primary mb-4 tracking-wider uppercase">
                 Olá, eu sou o
               </h2>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 tracking-tight leading-[1.1]">
                 {displayProfile.name}
               </h1>
-              <p className="text-xl md:text-3xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-3xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
                 Olá, eu sou <span className="text-white font-medium">João Dias</span>, desenvolvedor <span className="text-gradient font-semibold">Full Stack</span> apaixonado por <span className="text-primary/90">tecnologia</span> e criação de <span className="text-accent/90">soluções digitais</span>.
               </p>
             </motion.div>
