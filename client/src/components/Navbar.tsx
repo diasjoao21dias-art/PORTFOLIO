@@ -39,7 +39,7 @@ export function Navbar() {
           duration={500}
           className="text-2xl font-bold font-heading cursor-pointer text-white"
         >
-          Portfolio<span className="text-primary">.</span>
+          João Dias | <span className="text-primary font-medium text-lg">Full Stack</span>
         </Link>
 
         {/* Desktop Menu */}
