@@ -16,6 +16,9 @@ import { ExperienceItem } from "@/components/ExperienceItem";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+
+import imageClinic from "@assets/image_1771254351531.png";
+import imageEcommerce from "@assets/image_1771254394251.png";
 import {
   Form,
   FormControl,
@@ -302,9 +305,14 @@ export default function Portfolio() {
           <SectionHeading title="Projetos em Destaque" subtitle="Meus Trabalhos" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects?.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
+            {projects?.map((project, index) => {
+              // Override images based on index
+              const projectWithImage = { ...project };
+              if (index === 0) projectWithImage.image = imageClinic;
+              if (index === 1) projectWithImage.image = imageEcommerce;
+              
+              return <ProjectCard key={project.id} project={projectWithImage} index={index} />;
+            })}
             
             {(!projects || projects.length === 0) && Array.from({ length: 3 }).map((_, i) => (
               <Card key={i} className="bg-card border-border h-96">
@@ -323,9 +331,11 @@ export default function Portfolio() {
           </div>
           
           <div className="mt-16 text-center">
-            <Button variant="outline" size="lg" className="rounded-full px-8 border-white/10 hover:bg-white/5">
-              Ver Todos os Projetos <Github className="ml-2 w-4 h-4" />
-            </Button>
+            <a href="https://github.com/diasjoao21dias-art" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="rounded-full px-8 border-white/10 hover:bg-white/5">
+                Ver Todos os Projetos <Github className="ml-2 w-4 h-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>

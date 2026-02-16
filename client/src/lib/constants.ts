@@ -29,7 +29,7 @@ export const PROJECTS = [
     description: "Sistema para cadastro e agendamento de pacientes",
     technologies: ["PHP", "MySQL", "Bootstrap"],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/diasjoao21dias-art/saas-clinic2",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
   },
   {
@@ -38,17 +38,17 @@ export const PROJECTS = [
     description: "Plataforma de vendas online com carrinho de compras",
     technologies: ["JavaScript", "Node.js", "Express"],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/diasjoao21dias-art/gestao-de-loja",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80"
   },
   {
     id: 3,
-    title: "Dashboard Financeiro",
-    description: "Controle de gastos pessoais com gráficos interativos",
+    title: "Site Institucional",
+    description: "Desenvolvimento de site institucional moderno e responsivo",
     technologies: ["React", "TypeScript", "Tailwind"],
     demoLink: "#",
-    codeLink: "#",
-    image: "https://images.unsplash.com/photo-1554224155-98406852d009?w=800&q=80"
+    codeLink: "https://github.com/diasjoao21dias-art/vanusaazevedo",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
   }
 ];
 
