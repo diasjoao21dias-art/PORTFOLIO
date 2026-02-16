@@ -18,8 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import imageProfile from "@assets/ChatGPT_Image_16_de_fev._de_2026,_12_57_10_1771257462407.png";
-import imageClinic from "@assets/image_1771254351531.png";
-import imageEcommerce from "@assets/image_1771254394251.png";
+const imageClinic = "/images/project-clinic.jpg";
+const imageEcommerce = "/images/project-ecommerce.jpg";
 import {
   Form,
   FormControl,
