@@ -147,7 +147,7 @@ export default function Portfolio() {
                 {displayProfile.name}
               </h1>
               <p className="text-xl md:text-3xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
-                <span className="text-gradient font-semibold">{displayProfile.role}</span> baseado no Brasil.
+                Olá, eu sou João Dias, desenvolvedor Full Stack apaixonado por tecnologia e criação de soluções digitais.
               </p>
             </motion.div>
 
