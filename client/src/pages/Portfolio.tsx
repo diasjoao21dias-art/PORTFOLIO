@@ -155,16 +155,18 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-6 mt-4"
             >
               <ScrollLink to="projects" smooth={true} duration={500} offset={-100}>
-                <Button size="lg" className="rounded-full px-8 text-lg h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25">
+                <Button size="lg" className="rounded-full px-8 text-lg h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 min-w-[200px]">
                   Ver Projetos <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </ScrollLink>
-              <Button size="lg" variant="outline" className="rounded-full px-8 text-lg h-14 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm">
-                Baixar CV <Download className="ml-2 w-5 h-5" />
-              </Button>
+              <a href="/docs/cv.pdf" download="Curriculo_Joao_Dias.pdf">
+                <Button size="lg" variant="outline" className="rounded-full px-8 text-lg h-14 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm min-w-[200px]">
+                  Baixar CV <Download className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -174,10 +176,14 @@ export default function Portfolio() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 10, 0] }}
           transition={{ delay: 1, duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground hidden md:flex"
         >
-          <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center p-1">
-            <div className="w-1 h-3 bg-muted-foreground rounded-full" />
+          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-1">
+            <motion.div 
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-2 bg-primary rounded-full" 
+            />
           </div>
         </motion.div>
       </section>
