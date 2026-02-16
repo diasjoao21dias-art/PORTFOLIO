@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+import imageProfile from "@assets/ChatGPT_Image_16_de_fev._de_2026,_12_57_10_1771257462407.png";
 import imageClinic from "@assets/image_1771254351531.png";
 import imageEcommerce from "@assets/image_1771254394251.png";
 import {
@@ -115,7 +116,7 @@ export default function Portfolio() {
                   {/* Avatar Placeholder - replace with actual image if available */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-20 group-hover:opacity-30 transition-opacity" />
                   <img 
-                    src={`https://ui-avatars.com/api/?name=${displayProfile.name}&background=0D8ABC&color=fff&size=256`} 
+                    src={imageProfile} 
                     alt={displayProfile.name}
                     className="w-full h-full object-cover"
                   />
