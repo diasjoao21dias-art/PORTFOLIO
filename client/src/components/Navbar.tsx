@@ -88,11 +88,11 @@ export function Navbar() {
               className="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] md:hidden"
             />
             <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed bottom-0 left-0 right-0 h-[70vh] bg-card border-t border-white/10 z-[70] md:hidden p-8 rounded-t-[32px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] flex flex-col"
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "100%", opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed bottom-0 left-0 right-0 h-[80vh] bg-card border-t border-white/10 z-[100] md:hidden p-8 rounded-t-[32px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] flex flex-col"
             >
               <div className="w-12 h-1.5 bg-white/10 rounded-full mx-auto mb-8 shrink-0" />
               
