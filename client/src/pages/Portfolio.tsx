@@ -5,7 +5,8 @@ import { z } from "zod";
 import { motion } from "framer-motion";
 import { 
   Github, Linkedin, Mail, ArrowRight, Download, 
-  Terminal, Code, Database, Server, Smartphone, Layout
+  Terminal, Code, Database, Server, Smartphone, Layout,
+  MessageCircle
 } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -389,6 +390,23 @@ export default function Portfolio() {
                     <div>
                       <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">GitHub</span>
                       <span className="text-xl font-medium">Siga meu trabalho</span>
+                    </div>
+                  </a>
+                )}
+
+                {displayProfile.whatsapp && (
+                  <a 
+                    href={`https://wa.me/${displayProfile.whatsapp.replace(/\D/g, "")}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-6 group"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      <MessageCircle className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="block text-sm text-muted-foreground uppercase tracking-wider mb-1">WhatsApp</span>
+                      <span className="text-xl font-medium">Enviar mensagem</span>
                     </div>
                   </a>
                 )}

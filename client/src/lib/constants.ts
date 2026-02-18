@@ -4,7 +4,7 @@ export const PROFILE = {
   role: "Desenvolvedor Full Stack",
   bio: "Desenvolvedor apaixonado por criar soluções digitais inovadoras e experiências de usuário memoráveis. Com experiência em sistemas web, suporte técnico, redes e infraestrutura.",
   email: "dom_dias21@hotmail.com",
-  whatsapp: "11999999999",
+  whatsapp: "+5534998250458",
   linkedin: "https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/",
   github: "https://github.com/diasjoao21dias-art"
 };
