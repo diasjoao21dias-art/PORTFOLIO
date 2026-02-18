@@ -17,7 +17,7 @@
   <a href="https://portfolio-joao-dias.replit.app" target="_blank">
     <img src="https://img.shields.io/badge/Demo-Visualizar%20Site-blue?style=for-the-badge&logo=vercel" alt="Demo" />
   </a>
-  <a href="https://linkedin.com/in/seu-usuario" target="_blank">
+  <a href="https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Conectar-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
   </a>
   <a href="https://wa.me/5511999999999" target="_blank">
@@ -28,7 +28,7 @@
 ---
 
 ### 📖 Sobre Mim
-Desenvolvedor com mais de **10 anos de experiência**, focado em criar experiências de usuário memoráveis e sistemas robustos. Especialista em ecossistemas JavaScript/TypeScript.
+Desenvolvedor focado em criar experiências de usuário memoráveis e sistemas robustos. Com sólida base em sistemas web, suporte técnico e infraestrutura.
 
 - 🌍 Baseado no Brasil
 - 🚀 +20 Projetos entregues
@@ -40,8 +40,8 @@ Desenvolvedor com mais de **10 anos de experiência**, focado em criar experiên
 
 <p align="center">
   <img src="https://img.shields.io/badge/frontend-React%20%7C%20Tailwind%20%7C%20Framer%20Motion-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/backend-Node.js%20%7C%20Express%20%7C%20PostgreSQL-lightgrey?style=flat-square" />
-  <img src="https://img.shields.io/badge/outros-Git%20%7C%20Linux%20%7C%20Docker-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/backend-Node.js%20%7C%20PostgreSQL-lightgrey?style=flat-square" />
+  <img src="https://img.shields.io/badge/outros-Git%20%7C%20Linux%20%7C%20Redes-orange?style=flat-square" />
 </p>
 
 ---
@@ -49,7 +49,8 @@ Desenvolvedor com mais de **10 anos de experiência**, focado em criar experiên
 ### 📸 Preview do Portfólio
 
 <p align="center">
-  <img src="client/public/preview-hero.png" width="800px" alt="Portfolio Preview" />
+  <!-- SUBSTITUA 'SEU_USUARIO' E 'SEU_REPO' PELOS DADOS REAIS DO SEU GITHUB -->
+  <img src="https://raw.githubusercontent.com/diasjoao21dias-art/portfolio/main/assets/preview.png" width="800px" alt="Portfolio Preview" />
 </p>
 
 ---
