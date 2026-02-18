@@ -14,13 +14,13 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-joao-dias.replit.app" target="_blank">
+  <a href="https://portfoliojoaodias.onrender.com/" target="_blank">
     <img src="https://img.shields.io/badge/Demo-Visualizar%20Site-blue?style=for-the-badge&logo=vercel" alt="Demo" />
   </a>
   <a href="https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Conectar-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
   </a>
-  <a href="https://wa.me/5511999999999" target="_blank">
+  <a href="https://wa.me/5534998250458" target="_blank">
     <img src="https://img.shields.io/badge/WhatsApp-Conversar-green?style=for-the-badge&logo=whatsapp" alt="WhatsApp" />
   </a>
 </p>
@@ -70,7 +70,7 @@ Desenvolvedor focado em criar experiências de usuário memoráveis e sistemas r
 Sinta-se à vontade para me chamar para novos projetos ou apenas para trocar uma ideia sobre tecnologia!
 
 - 📧 **Email:** [dom_dias21@hotmail.com](mailto:dom_dias21@hotmail.com)
-- 💬 **WhatsApp:** [Enviar mensagem](https://wa.me/5511999999999)
+- 💬 **WhatsApp:** [Enviar mensagem](https://wa.me/5534998250458)
 
 ---
 
