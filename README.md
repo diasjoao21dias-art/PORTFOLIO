@@ -4,7 +4,14 @@ Este é o meu portfólio profissional, desenvolvido com React, Tailwind CSS e Fr
 
 ## 🚀 Visual do Site
 
-![Screenshot do Portfólio](screenshot.png)
+### Home
+![Home](hero.png)
+
+### Sobre Mim & Habilidades
+![Sobre e Habilidades](about.png)
+
+### Projetos & Contato
+![Projetos e Contato](projects.png)
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -31,4 +38,4 @@ Este é o meu portfólio profissional, desenvolvido com React, Tailwind CSS e Fr
    npm run dev
    ```
 
-Desenvolvido por [Seu Nome].
+Desenvolvido por João Dias.
